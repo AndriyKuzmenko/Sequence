@@ -23,8 +23,6 @@
             android:layout_height="match_parent"
             android:layout_weight="1" />
 
-        v
-
         <ToggleButton
             android:layout_width="0px"
             android:layout_height="wrap_content"
