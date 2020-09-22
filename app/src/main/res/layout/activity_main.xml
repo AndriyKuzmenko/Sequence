@@ -115,5 +115,33 @@
     <Space
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:layout_weight="6" />
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:text="Button" />
+
+        <Space
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="8" />
 </LinearLayout>
