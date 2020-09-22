@@ -26,7 +26,9 @@
         <ToggleButton
             android:layout_width="0px"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textOff="Arithmetic progression "
+            android:textOn="Geometric progression " />
 
         <Space
             android:layout_width="0px"
@@ -53,7 +55,7 @@
             android:layout_width="0px"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="a1=" />
 
         <Space
             android:layout_width="0px"
@@ -92,7 +94,7 @@
             android:layout_width="0px"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="d=" />
 
         <Space
             android:layout_width="0px"
@@ -132,7 +134,7 @@
             android:layout_width="0px"
             android:layout_height="match_parent"
             android:layout_weight="7"
-            android:text="Button" />
+            android:text="See Results" />
 
         <Space
             android:layout_width="0px"
