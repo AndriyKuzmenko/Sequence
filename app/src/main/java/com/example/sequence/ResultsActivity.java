@@ -24,6 +24,7 @@ public class ResultsActivity extends AppCompatActivity
 
         sequence=new double[20];
         sums=new double[20];
+        array=new String[20];
 
         sequenceView=(ListView)findViewById(R.id.sequenceView);
         gi=getIntent();
@@ -34,20 +35,20 @@ public class ResultsActivity extends AppCompatActivity
         if (!type) arithmetic();
         else geometric();
 
-        //ArrayAdapter<String> adp=new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, array);
-        //sequenceView.setAdapter(adp);
+        ArrayAdapter<String> adp=new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, array);
+        sequenceView.setAdapter(adp);
     }
 
     public void arithmetic()
     {
         sequence[0]=a1;
-        sums[0]=a1;
+        array[0]=sequence[0]+"";
 
         for (int i=1; i<20; i++)
         {
             sequence[i]=sequence[i-1]+d;
             sums[i]=sums[i-1]+sequence[i];
-            //array[i]=String.valueOf(sequence[i]);
+            array[i]=sequence[i]+"";
         }
     }
 
@@ -55,12 +56,13 @@ public class ResultsActivity extends AppCompatActivity
     {
         sequence[0]=a1;
         sums[0]=a1;
+        array[0]=sequence[0]+"";
 
         for (int i=1; i<20; i++)
         {
             sequence[i]=sequence[i-1]*d;
             sums[i]=sums[i-1]+sequence[i];
-            //array[i]=String.valueOf(sequence[i]);
+            array[i]=sequence[i]+"";
         }
     }
 }
