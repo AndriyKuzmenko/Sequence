@@ -112,45 +112,60 @@
                 android:layout_weight="5"
                 android:orientation="vertical">
 
-                <TextView
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="0px"
                     android:layout_weight="3"
-                    android:text="TextView" />
+                    android:clickable="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
 
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="0px"
                     android:layout_weight="1" />
 
-                <TextView
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="0px"
                     android:layout_weight="3"
-                    android:text="TextView" />
+                    android:clickable="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
 
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="0px"
                     android:layout_weight="1" />
 
-                <TextView
+                <EditText
                     android:layout_width="match_parent"
                     android:layout_height="0px"
                     android:layout_weight="3"
-                    android:text="TextView" />
+                    android:clickable="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
 
                 <Space
                     android:layout_width="match_parent"
                     android:layout_height="0px"
                     android:layout_weight="1" />
 
-                <TextView
+                <EditText
+                    android:id="@+id/editText"
                     android:layout_width="match_parent"
                     android:layout_height="0px"
                     android:layout_weight="3"
-                    android:text="TextView" />
+                    android:clickable="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="Name" />
+
             </LinearLayout>
+
         </LinearLayout>
 
         <Space
