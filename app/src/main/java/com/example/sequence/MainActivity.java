@@ -41,4 +41,9 @@ public class MainActivity extends AppCompatActivity
             difference.setText("d=");
         }
     }
+
+    public void countResults(View view)
+    {
+        
+    }
 }
