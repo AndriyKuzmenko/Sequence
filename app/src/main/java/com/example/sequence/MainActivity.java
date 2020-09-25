@@ -2,15 +2,22 @@ package com.example.sequence;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity
 {
     ToggleButton typeToggleButton;
     TextView firstItem, difference;
+    EditText firstItemInput, differenceInput;
+    Intent si;
+    String dString, a1String;
+    double d,a1;
 
     boolean type; //false=arithmetic  true=geometric
 
@@ -23,6 +30,9 @@ public class MainActivity extends AppCompatActivity
         typeToggleButton=(ToggleButton)findViewById(R.id.typeToggleButton);
         firstItem=(TextView)findViewById(R.id.firstItem);
         difference=(TextView)findViewById(R.id.difference);
+        firstItemInput=(EditText)findViewById(R.id.firstItemInput);
+        differenceInput=(EditText)findViewById(R.id.differenceInput);
+        si=new Intent(this, ResultsActivity.class);
 
         type=false;
     }
@@ -44,6 +54,29 @@ public class MainActivity extends AppCompatActivity
 
     public void countResults(View view)
     {
-        
+        dString=differenceInput.getText().toString();
+        a1String=firstItemInput.getText().toString();
+        if (!(check(dString) && check(a1String))) return;
+
+        a1=Double.parseDouble(a1String);
+        d=Double.parseDouble(dString);
+        si.putExtra("type",type);
+        si.putExtra("a1",a1);
+        si.putExtra("d",d);
+        startActivity(si);
+    }
+
+    public boolean check(String s)
+    {
+        try
+        {
+            double num = Double.parseDouble(s);
+        }
+        catch (NumberFormatException nfe)
+        {
+            Toast.makeText(getApplicationContext(), "The input you entered is not valid", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        return true;
     }
 }

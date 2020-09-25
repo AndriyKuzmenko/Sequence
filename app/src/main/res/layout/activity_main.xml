@@ -66,7 +66,8 @@
             android:layout_weight="1" />
 
         <EditText
-            android:layout_width="0dp"
+            android:id="@+id/firstItemInput"
+            android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
@@ -106,7 +107,8 @@
             android:layout_weight="1" />
 
         <EditText
-            android:layout_width="0dp"
+            android:id="@+id/differenceInput"
+            android:layout_width="0px"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
