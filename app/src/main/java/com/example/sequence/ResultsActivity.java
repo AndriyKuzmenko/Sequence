@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-public class ResultsActivity extends AppCompatActivity
+public class ResultsActivity extends AppCompatActivity implements AdapterView.OnItemClickListener
 {
     ListView sequenceView;
     Intent gi;
@@ -43,12 +45,20 @@ public class ResultsActivity extends AppCompatActivity
         SnView=(EditText)findViewById(R.id.SnView);
         a1View.setText(String.valueOf(a1));
         dView.setText(String.valueOf(d));
+        //sequenceView.setCoiceMode(ListView.COICE_MODE_SINGLE);
+        //sequenceView.setItemClickListener(this);
 
         if (!type) arithmetic();
         else geometric();
 
         ArrayAdapter<String> adp=new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, array);
         sequenceView.setAdapter(adp);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+    {
+
     }
 
     public void arithmetic()
