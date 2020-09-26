@@ -59,12 +59,14 @@ public class ResultsActivity extends AppCompatActivity implements AdapterView.On
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id)
     {
-
+        nView.setText(String.valueOf(position+1));
+        SnView.setText(String.valueOf(sums[position]));
     }
 
     public void arithmetic()
     {
         sequence[0]=a1;
+        sums[0]=a1;
         array[0]=sequence[0]+"";
 
         for (int i=1; i<20; i++)
