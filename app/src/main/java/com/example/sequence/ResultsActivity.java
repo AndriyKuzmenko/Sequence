@@ -45,8 +45,9 @@ public class ResultsActivity extends AppCompatActivity implements AdapterView.On
         SnView=(EditText)findViewById(R.id.SnView);
         a1View.setText(String.valueOf(a1));
         dView.setText(String.valueOf(d));
-        //sequenceView.setCoiceMode(ListView.COICE_MODE_SINGLE);
-        //sequenceView.setItemClickListener(this);
+
+        sequenceView.setOnItemClickListener(this);
+        sequenceView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 
         if (!type) arithmetic();
         else geometric();
