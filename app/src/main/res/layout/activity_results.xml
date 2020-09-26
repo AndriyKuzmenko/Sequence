@@ -63,10 +63,30 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/a1Label"
                     android:layout_width="match_parent"
                     android:layout_height="0px"
                     android:layout_weight="3"
-                    android:text="TextView" />
+                    android:fontFamily="serif"
+                    android:text="a1="
+                    android:textColor="#02082B"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/dLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="3"
+                    android:text="d="
+                    android:textColor="#02082B"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -77,7 +97,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="0px"
                     android:layout_weight="3"
-                    android:text="TextView" />
+                    android:text="n="
+                    android:textColor="#02082B"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -88,18 +111,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="0px"
                     android:layout_weight="3"
-                    android:text="TextView" />
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="0px"
-                    android:layout_weight="1" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0px"
-                    android:layout_weight="3"
-                    android:text="TextView" />
+                    android:text="Sn="
+                    android:textColor="#02082B"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
             <Space
