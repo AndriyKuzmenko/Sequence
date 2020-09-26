@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -17,6 +18,7 @@ public class ResultsActivity extends AppCompatActivity
     double[] sequence,sums;
     String[] array;
     TextView a1Label, dLabel;
+    EditText a1View, dView, nView, SnView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -35,6 +37,12 @@ public class ResultsActivity extends AppCompatActivity
         d=gi.getDoubleExtra("d",0);
         a1Label=(TextView)findViewById(R.id.a1Label);
         dLabel=(TextView)findViewById(R.id.dLabel);
+        a1View=(EditText)findViewById(R.id.a1View);
+        dView=(EditText)findViewById(R.id.dView);
+        nView=(EditText)findViewById(R.id.nView);
+        SnView=(EditText)findViewById(R.id.SnView);
+        a1View.setText(String.valueOf(a1));
+        dView.setText(String.valueOf(d));
 
         if (!type) arithmetic();
         else geometric();
