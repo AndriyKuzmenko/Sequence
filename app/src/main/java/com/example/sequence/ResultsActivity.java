@@ -16,9 +16,9 @@ public class ResultsActivity extends AppCompatActivity implements AdapterView.On
     ListView sequenceView;
     Intent gi;
     boolean type;
-    double a1,d;
-    double[] sequence,sums;
-    String[] array;
+    double a1,d, currentItem, previousItem;
+    double[] sums;
+    String[] sequence;
     TextView a1Label, dLabel;
     EditText a1View, dView, nView, SnView;
 
@@ -28,9 +28,8 @@ public class ResultsActivity extends AppCompatActivity implements AdapterView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
 
-        sequence=new double[20];
         sums=new double[20];
-        array=new String[20];
+        sequence=new String[20];
 
         sequenceView=(ListView)findViewById(R.id.sequenceView);
         gi=getIntent();
@@ -52,7 +51,7 @@ public class ResultsActivity extends AppCompatActivity implements AdapterView.On
         if (!type) arithmetic();
         else geometric();
 
-        ArrayAdapter<String> adp=new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, array);
+        ArrayAdapter<String> adp=new ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, sequence);
         sequenceView.setAdapter(adp);
     }
 
@@ -65,15 +64,16 @@ public class ResultsActivity extends AppCompatActivity implements AdapterView.On
 
     public void arithmetic()
     {
-        sequence[0]=a1;
+        currentItem=a1;
         sums[0]=a1;
-        array[0]=sequence[0]+"";
+        sequence[0]=currentItem+"";
 
         for (int i=1; i<20; i++)
         {
-            sequence[i]=sequence[i-1]+d;
-            sums[i]=sums[i-1]+sequence[i];
-            array[i]=sequence[i]+"";
+            previousItem=currentItem;
+            currentItem=previousItem+d;
+            sums[i]=sums[i-1]+currentItem;
+            sequence[i]=currentItem+"";
         }
     }
 
@@ -82,15 +82,16 @@ public class ResultsActivity extends AppCompatActivity implements AdapterView.On
         a1Label.setText("b1=");
         dLabel.setText("q=");
 
-        sequence[0]=a1;
+        currentItem=a1;
         sums[0]=a1;
-        array[0]=sequence[0]+"";
+        sequence[0]=currentItem+"";
 
         for (int i=1; i<20; i++)
         {
-            sequence[i]=sequence[i-1]*d;
-            sums[i]=sums[i-1]+sequence[i];
-            array[i]=sequence[i]+"";
+            previousItem=currentItem;
+            currentItem=previousItem*d;
+            sums[i]=sums[i-1]+currentItem;
+            sequence[i]=currentItem+"";
         }
     }
 }
